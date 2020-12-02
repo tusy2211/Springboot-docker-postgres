@@ -1,0 +1,9 @@
+version: '3.1'
+services:
+
+  app:
+    container_name: springboot-postgresql
+    image: springboot-postgresql
+    build: ./
+    ports:
+      - "8077:8077"
