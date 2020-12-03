@@ -11,4 +11,5 @@ Stop docker compose: docker-compose -f /home/gtgt/khanhbn/springboot-postgres-do
 Xóa repo <none>:  docker images | grep none | awk '{ print $3; }' | xargs docker rmi
 Clean package maven ignore test: mvn clean compile package -DskipTests=true
 
-
+4. Bổ sung xuất excel sử dụng thư viện JXLS
+5. Upload/Download file sử dụng minio server 10.22.7.121:9000 (vnpay/vnpay@123) 

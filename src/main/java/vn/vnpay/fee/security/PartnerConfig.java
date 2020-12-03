@@ -6,22 +6,16 @@
 package vn.vnpay.fee.security;
 
 import java.util.List;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+
+import lombok.*;
 
 /**
  *
- * @author truongnq
+ * @author khanhbn
  */
 @NoArgsConstructor
 @AllArgsConstructor
-@Getter
-@Setter
-@ToString
+@Data
 @Builder
 public class PartnerConfig {
     private String name;

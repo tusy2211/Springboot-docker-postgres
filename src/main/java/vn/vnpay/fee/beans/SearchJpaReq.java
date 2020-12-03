@@ -18,11 +18,12 @@ public class SearchJpaReq {
     @NotNull
     private Long payType;
 
+    @Schema(description = "Check export excel?")
+    private Boolean excel;
+
     @Schema(description = "Pagination. Ex: fromRow:0 toRow: 10")
-//    @Min(value = 0)
     private int fromRow;
 
-//    @Min(value = 0)
     @Schema(description = "Pagination. Ex: fromRow:0 toRow: 10")
     private int toRow;
 }

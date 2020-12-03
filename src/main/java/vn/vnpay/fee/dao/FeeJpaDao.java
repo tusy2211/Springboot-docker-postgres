@@ -1,13 +1,12 @@
 package vn.vnpay.fee.dao;
 
-import vn.vnpay.fee.beans.BaseRes;
-import vn.vnpay.fee.beans.FeeBean;
-import vn.vnpay.fee.beans.SearchJpaReq;
-import vn.vnpay.fee.beans.SearchReq;
+import vn.vnpay.fee.beans.*;
 import vn.vnpay.fee.exception.BusinessException;
 import vn.vnpay.fee.exception.DaoException;
 
+import java.util.List;
+
 public interface FeeJpaDao {
 
-    BaseRes getListFee(SearchJpaReq req);
+    List<FeeJpaDTO> getListFee(SearchJpaReq req);
 }

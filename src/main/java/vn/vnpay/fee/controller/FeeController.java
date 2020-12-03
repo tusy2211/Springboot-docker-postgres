@@ -31,7 +31,7 @@ public class FeeController {
 
     @Operation(summary = "List All Fee using JPA")
     @PostMapping(value = "/all-jpa")
-    public BaseRes getAllJpa(@Valid @RequestBody SearchJpaReq req) {
+    public BaseRes getAllJpa(@Valid @RequestBody SearchJpaReq req) throws Exception {
         return feeJpaService.getListFee(req);
     }
 }

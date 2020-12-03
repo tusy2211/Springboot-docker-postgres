@@ -27,7 +27,7 @@ public class FeeDaoImplJpa implements FeeJpaDao {
     ModelMapper modelMapper;
 
     @Override
-    public BaseRes getListFee(SearchJpaReq req) {
+    public List<FeeJpaDTO> getListFee(SearchJpaReq req) {
         Specification conditions = Specification.where(SpecificationCustom.hasValue(FeeBean_.PAY_TYPE,
                 req.getPayType())
                 .and(SpecificationCustom.hasValue(FeeBean_.CALCULATION_FORM, 1)
@@ -40,7 +40,7 @@ public class FeeDaoImplJpa implements FeeJpaDao {
                 .map(x -> {
                     return modelMapper.map(x, FeeJpaDTO.class);
                 }).collect(Collectors.toList());
-        return BaseRes.of(jpaDTOList);
+        return jpaDTOList;
     }
 
 

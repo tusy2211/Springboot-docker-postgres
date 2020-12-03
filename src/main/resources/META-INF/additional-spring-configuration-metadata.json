@@ -1,0 +1,48 @@
+{
+  "properties": [
+    {
+      "name": "partners",
+      "type": "java.lang.String",
+      "description": "Description for partners."
+    },
+    {
+      "name": "spring.minio.access-key",
+      "type": "java.lang.String",
+      "description": "Description for spring.minio.access-key."
+    },
+    {
+      "name": "spring.minio.url",
+      "type": "java.lang.String",
+      "description": "Description for spring.minio.url."
+    },
+    {
+      "name": "spring.minio.secret-key",
+      "type": "java.lang.String",
+      "description": "Description for spring.minio.secret-key."
+    },
+    {
+      "name": "spring.minio.connect-timeout",
+      "type": "java.lang.String",
+      "description": "Description for spring.minio.connect-timeout."
+    },
+    {
+      "name": "spring.minio.read-timeout",
+      "type": "java.lang.String",
+      "description": "Description for spring.minio.read-timeout."
+    },
+    {
+      "name": "spring.minio.write-timeout",
+      "type": "java.lang.String",
+      "description": "Description for spring.minio.write-timeout."
+    },
+    {
+      "name": "spring.minio.bucket",
+      "type": "java.lang.String",
+      "description": "Description for spring.minio.bucket."
+    },
+    {
+      "name": "spring.minio.time-share-file",
+      "type": "java.lang.String",
+      "description": "Description for spring.minio.time-share-file."
+    }
+  ] }

@@ -20,6 +20,9 @@ public class BaseRes<T> {
     @Schema(description = "Message response")
     private String msg;
 
+    @Schema(description = "url download file")
+    private String url;
+
     @Schema(description = "Object response")
     private T data;
 
@@ -27,15 +30,23 @@ public class BaseRes<T> {
         return of(Rescode.SUCCESS.code(), Rescode.SUCCESS.description(), data);
     }
 
+    public static BaseRes of(String url) {
+        return of(Rescode.SUCCESS.code(), Rescode.SUCCESS.description(), url);
+    }
+
     public static BaseRes of(Rescode resCode) {
         return of(resCode.code(), resCode.description());
     }
 
     public static BaseRes of(String code, String msg) {
-        return of(code, msg, null);
+        return of(code, msg,null);
     }
 
     public static BaseRes of(String code, String msg, Object data) {
         return BaseRes.builder().code(code).msg(msg).data(data).build();
+    }
+
+    public static BaseRes of(String code, String msg, String url) {
+        return BaseRes.builder().code(code).msg(msg).url(url).build();
     }
 }

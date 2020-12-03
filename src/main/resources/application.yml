@@ -14,6 +14,15 @@ spring:
         password: postgres
     jpa:
         show-sql: true
+    minio:
+      url: http://10.22.7.121:9000/
+      access-key: vnpay
+      secret-key: Vnpay@123
+      connect-timeout: 60
+      read-timeout: 10
+      write-timeout: 60
+      bucket: new-mms
+      time-share-file: 600
 partners:
     - name: khdn
       accessKey: khdn
@@ -24,6 +33,10 @@ partners:
         - 172.16.68.6
         - 0:0:0:0:0:0:0:1
         - "*"
+
+report:
+  excel:
+    sheet-size: 1000
 
 springdoc:
   api-docs:

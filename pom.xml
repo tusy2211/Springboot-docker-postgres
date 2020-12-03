@@ -20,6 +20,11 @@
         <version.hibernate.validator>6.1.0.Final</version.hibernate.validator>
         <version.modelmapper>2.3.5</version.modelmapper>
         <version.jpamodelgen>5.4.9.Final</version.jpamodelgen>
+        <version.minio>7.1.4</version.minio>
+        <version.jxls>[2.6.0-SNAPSHOT,)</version.jxls>
+        <version.jxls-poi>[1.2.0-SNAPSHOT,)</version.jxls-poi>
+        <version.jxls-jexcel>[1.0.8,)</version.jxls-jexcel>
+        <version.jxls-reader>[2.0.5,)</version.jxls-reader>
     </properties>
 
     <dependencies>
@@ -120,6 +125,44 @@
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <version>42.2.5</version>
+        </dependency>
+        <dependency>
+            <groupId>io.minio</groupId>
+            <artifactId>minio</artifactId>
+            <version>${version.minio}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jxls</groupId>
+            <artifactId>jxls</artifactId>
+            <version>${version.jxls}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>ch.qos.logback</groupId>
+                    <artifactId>logback-core</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>ch.qos.logback</groupId>
+                    <artifactId>logback-classic</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jxls</groupId>
+            <artifactId>jxls-poi</artifactId>
+            <version>${version.jxls-poi}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jxls</groupId>
+            <artifactId>jxls-jexcel</artifactId>
+            <version>${version.jxls-jexcel}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jxls</groupId>
+            <artifactId>jxls-reader</artifactId>
+            <version>${version.jxls-reader}</version>
         </dependency>
 
     </dependencies>

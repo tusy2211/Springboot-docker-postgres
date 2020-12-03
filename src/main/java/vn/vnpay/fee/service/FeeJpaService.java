@@ -9,5 +9,5 @@ import vn.vnpay.fee.exception.DaoException;
 
 public interface FeeJpaService {
 
-    BaseRes getListFee(SearchJpaReq req);
+    BaseRes getListFee(SearchJpaReq req) throws Exception;
 }
