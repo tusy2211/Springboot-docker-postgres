@@ -21,9 +21,11 @@ public class BaseRes<T> {
     private String msg;
 
     @Schema(description = "url download file")
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private String url;
 
     @Schema(description = "Object response")
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private T data;
 
     public static BaseRes of(Object data) {

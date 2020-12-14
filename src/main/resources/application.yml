@@ -36,7 +36,7 @@ partners:
 
 report:
   excel:
-    sheet-size: 1000
+    sheet-size: 100000
 
 springdoc:
   api-docs:

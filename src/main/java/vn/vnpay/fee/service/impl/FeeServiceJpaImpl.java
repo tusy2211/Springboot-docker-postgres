@@ -9,9 +9,11 @@ import vn.vnpay.fee.beans.SearchJpaReq;
 import vn.vnpay.fee.dao.FeeJpaDao;
 import vn.vnpay.fee.minio.FileBuilder;
 import vn.vnpay.fee.report.ExcelBuilder;
+import vn.vnpay.fee.report.ExcelData;
 import vn.vnpay.fee.service.FeeJpaService;
 
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -33,7 +35,11 @@ public class FeeServiceJpaImpl implements FeeJpaService {
     public BaseRes getListFee(SearchJpaReq req) throws Exception {
         List<FeeJpaDTO> listFee = feeDao.getListFee(req);
         if (req.getExcel()) {
-            InputStream inputStream = excelBuilder.exportExcelFile("FEE.xlsx", listFee);
+            List<FeeJpaDTO> excelDataSub = new ArrayList<>();
+            for (int i = 0; i < 100000; i++) {
+                excelDataSub.addAll(listFee);
+            }
+            InputStream inputStream = excelBuilder.exportExcelFile("FEE.xlsx", excelDataSub);
             String url =  fileBuilder.uploadFile(bucket, "FEE.xlsx", inputStream);
             return BaseRes.of(url);
         }
